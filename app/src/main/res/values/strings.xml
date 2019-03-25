@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KioskBrowser</string>
+    <string name="err_not_device_owner">App is not a device owner!</string>
+    <string name="err_locktask_not_permitted">App is not allowed to use lock task!!</string>
+</resources>
