@@ -116,15 +116,12 @@ class MainActivity : AppCompatActivity() {
 
         override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
 
-            // Not allowed to load this url - do nothing..
-            if (!allowedHosts.contains(request?.url?.host))
-                return true
-
-            // Enable JavaScript
-            view.getSettings.setJavaScriptEnabled(true);
-
             // Allow to load only whitelisted hosts
-            return false
+            if (allowedHosts.contains(request?.url?.host))
+                return false
+
+            // Not allowed to load this url - do nothing..
+            return true
         }
     }
 
